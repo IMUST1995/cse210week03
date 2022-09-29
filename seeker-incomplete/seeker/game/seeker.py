@@ -9,7 +9,7 @@
     #"""
 class Seeker:
         def __init__(self):
-            self.location = 0
+            self.__location = 0
 # 2) Create the class constructor. Use the following method comment.
        # """Constructs a new Seeker.
 
@@ -24,7 +24,7 @@ class Seeker:
         #    number: The current location,
         #"""
         def get_location(self):
-            return self.location
+            return self.__location
 # 4) Create the move_location(self, location) method. Use the following method comment.
         """Moves to the given location.
 
@@ -33,4 +33,4 @@ class Seeker:
             location (int): The given location.
         """
         def move_location(self, location):
-            self.location = location
+            self.__location = location
