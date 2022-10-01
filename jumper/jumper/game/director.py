@@ -22,7 +22,8 @@ class Director:
             self._do_outputs()
 #
     def _get_inputs(self):
-        """ self.__puzzle.draw_word() """
+        """ self.__puzzle.update_draw_puzzle("i") """
+        self.__puzzle.draw_word()
         #holding a jumper draw to print with the terminaal service.
         jumper_draw = self.__jumper.draw_jumper_life()
         self._terminal_service.print_jumper(jumper_draw)
@@ -32,12 +33,13 @@ class Director:
         return new_letter
         #self.__puzzle.move_location(new_location)
     def _do_updates(self, letter):
-        print(self.__puzzle.get_word__selected())
         #self._hider.watch_seeker(self._seeker)
         proccess_guess = self.__puzzle.process_guess(letter)
         if proccess_guess:
             self.__jumper.remove_jumper_life()
-
+        #if the letter match will update the list of the draw    
+        else:
+            self.__puzzle.update_draw_puzzle(letter)
     def _do_outputs(self):
         #hint = self._hider.get_hint()
         #self._terminal_service.write_text(hint)

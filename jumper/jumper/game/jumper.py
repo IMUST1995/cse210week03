@@ -20,8 +20,6 @@ class Jumper:
     #method called when the letter is not in the word
     def remove_jumper_life(self):
             self.__jumper_life -= 1
-            print("losing live")
-            print(self.__jumper_life)
     #method called to check the life of the jumper, if it returns 0 or less program ends.
     def return_life(self):
         return self.__jumper_life
