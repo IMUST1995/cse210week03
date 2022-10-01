@@ -3,9 +3,9 @@ import random
 
 class Puzzle:
         def __init__(self):
-            self.__listWords = ['lion']
+            self.__listWords = ['lion', 'panther', 'cat', 'tiger']
             self.__word_selected = random.choice(self.__listWords)
-            self.__word_guessing = [" _ "] * len(self.__word_selected)
+            self.__word_guessing = [" _"] * len(self.__word_selected)
 
         def get_word__selected(self):
             return self.__word_selected
@@ -29,7 +29,7 @@ class Puzzle:
 
         #if _ sign is not in the list. return false and ends program
         def can_continue_guessing(self):
-            if " _ " in self.__word_guessing:
+            if " _" in self.__word_guessing:
                 return True
             else:
                 print(f'You win!, the word is "{self.__word_selected}"')

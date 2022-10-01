@@ -23,9 +23,3 @@ class Jumper:
     #method called to check the life of the jumper, if it returns 0 or less program ends.
     def return_life(self):
         return self.__jumper_life
-    #def is_found(self):
-        #return (self._distance[-1] == 0)
-        
-    #def watch_seeker(self, seeker):
-        #distance = abs(self._location - seeker.get_location())
-        #self._distance.append(distance)

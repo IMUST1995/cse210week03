@@ -52,4 +52,4 @@ class Director:
             self.__still_alive = False
             jumper_draw = self.__jumper.draw_jumper_life()
             self._terminal_service.print_jumper(jumper_draw)
-            print('END')
+            print(f'End, the jumper is not longer available. =(')
